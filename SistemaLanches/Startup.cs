@@ -40,7 +40,9 @@ namespace SistemaLanches
 
 
             // MVC - criado pelo sistema
-            services.AddControllersWithViews();
+            // services.AddControllersWithViews(); alterado para visualizar as atualização das páginas enquanto compila
+            // incluir dependencia - Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

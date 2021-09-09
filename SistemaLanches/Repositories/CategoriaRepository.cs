@@ -8,7 +8,7 @@ namespace SistemaLanches.Repositories
     {
         private readonly AppDbContext _context;
         
-        private CategoriaRepository(AppDbContext contexto)
+        public CategoriaRepository(AppDbContext contexto)
         {
             _context = contexto;
         }
