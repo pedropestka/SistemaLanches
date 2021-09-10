@@ -14,6 +14,8 @@ namespace SistemaLanches.Context
         // tabelas - entidades mapeadas:
         public DbSet<Lanche> Lanches { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
+
 
     }
 }
