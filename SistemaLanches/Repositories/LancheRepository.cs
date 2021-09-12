@@ -24,5 +24,8 @@ namespace SistemaLanches.Repositories
         {
             return _context.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
         }
+        //public Lanche GetLancheById(int lancheId) => _context.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
+
+
     }
 }

@@ -2,20 +2,8 @@
 
 @if (Model.CarrinhoCompra.CarrinhoCompraItens.Count > 0)
 {
-    <li>
-        <a id="carrinho" asp-controller="CarrinhoCompra">
-            <span><img src="~/images/cart-5-16.png" /></span>
-            <span style="color:white">
-                @Model.CarrinhoCompra.CarrinhoCompraItens.Count
-            </span>
-        </a>
-    </li>
-
+    <a class="nav-link text-light" asp-controller="CarrinhoCompra">
+        <span><img src="~/images/cart-5-16.png" /></span>
+        <span style="color:white"> @Model.CarrinhoCompra.CarrinhoCompraItens.Count </span>
+    </a>
 }
-
-
-<style>
-    #carrinho {
-        vertical-align: -webkit-baseline-middle;
-    }
-</style>
