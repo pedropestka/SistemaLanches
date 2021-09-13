@@ -1,4 +1,4 @@
-﻿<div class="dropdown">
+﻿@*<div class="dropdown">
     <a asp-controller="Lanche" asp-action="List" class="dropdown-toggle" data-toggle="dropdown" style="color:orange">Lanches</a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -23,5 +23,27 @@
 
 
     </div>
-</div>
+</div>*@
 
+
+
+
+
+
+
+        @foreach (var categoria in Model)
+        {
+            <a class="dropdown-item"
+               asp-controller="Lanche"
+               asp-action="List"
+               style="color:black"
+               asp-route-categoria="@categoria.CategoriaNome">@categoria.CategoriaNome</a>
+        }
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item"
+           asp-controller="Lanche"
+           asp-action="List"
+           style="color:black"
+           asp-route-categoria="">Todos os Lanches</a>

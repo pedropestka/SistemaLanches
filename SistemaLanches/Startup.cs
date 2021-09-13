@@ -43,6 +43,8 @@ namespace SistemaLanches
             // AddScoped - serviço será criado para cada requisição
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
             services.AddTransient<ILancheRepository, LancheRepository>();
+            services.AddTransient<IPedidoRepository, PedidoRepository>();
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); // para ter acesso a sessão no contexto
             // evita criar carrinhos duplicados - Se houver duas requisições simultâneas vai gerar instâncias diferentes
             services.AddScoped(cp => CarrinhoCompra.GetCarrinho(cp));
